@@ -1,8 +1,31 @@
-const num1 = 100;
-const num2 = 50;
-let val;
+const name = 'John';
+const age = 123;
+const job = 'Web Dev';
+const city = 'Miami';
+let html;
+//Without template strings;
 
-val = num1 + num2;
-val = Math.random();
+html = "<ul><li>Name: " + name + "</li><li>Age: " + age + "</li><li>Job: " + job + "</li><li>City: " + city + "</li></ul>";
 
-console.log(val);
+html = "<ul>"+
+        "<li>Name: " + name + "</li>"+
+        "<li>Age: " + age + "</li>"+
+        "<li>Job: " + job + "</li>"+
+        "<li>City: " + city + "</li>"+
+        "</ul>";
+
+//With template strings;
+
+html = `
+    <ul>
+    <li>Name: ${name}</li>
+    <li>Age: ${age}</li>
+    <li>Job: ${job}</li>
+    <li>City: ${city}</li>
+    </ul>
+
+
+
+`;
+
+document.body.innerHTML = html;
