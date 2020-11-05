@@ -1,28 +1,25 @@
-// // document.getElementById()
+// create element
+const li = document.createElement('li');
 
-// console.log(document.getElementById("task-title"));
+// add class
+li.className = 'collection-item';
 
-// // get things from th element
+// add id
+li.id = 'new-item';
 
-// console.log(document.getElementById('task-title').id);
-// console.log(document.getElementById('task-title').className);
+// add attribute
+li.setAttribute('title', 'New Item');
 
-// // change styling
+// Create text node and append
+li.appendChild(document.createTextNode('Hello World'));
 
-// document.getElementById('task-title').style.background = '#999';
-// document.getElementById('task-title').style.color = '#fff';
-// document.getElementById('task-title').style.padding = '5px';
+// create new link element
+const link = document.createElement('a');
+link.className = 'delete-item secondary-content';
+link.innerHTML = '<i class = "fa fa-remove"></i>';
+li.appendChild(link);
 
-// // change content
-// document.getElementById('task-title').textContent = 'Task List';
-// document.getElementById('task-title').innerText = "My Tasks";
-// document.getElementById('task-title').innerHTML = '<span style="color:red">Task List</span>';
+// append li as child to ul
+document.querySelector('ul.collection').appendChild(li);
 
-// document.querySelector()
-
-// console.log(document.querySelector('#task-title'));
-// console.log(document.querySelector('.card-title'));
-// console.log(document.querySelector('h5'));
-
-// document.querySelector('div').style.color='red';
-// document.querySelector('body div:last-child').style.color='red';
+console.log(li);
